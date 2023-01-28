@@ -13,7 +13,8 @@ namespace Biniverso.Presentation.Models
       
         [DisplayName("Descrição")]
         public string? Description { get; set; }
-        public string Path { get; set; }
+        [DisplayName("Imagem")]
+        public FormFile Path { get; set; }
         public DateTime Date { get; set; }
     }
 }

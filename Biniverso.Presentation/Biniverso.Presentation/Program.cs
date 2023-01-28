@@ -1,7 +1,24 @@
+using Biniverso.Data;
+using Biniverso.Presentation.Configurations;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<BiniContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+});
+
+builder.Services.AddAutoMapper(typeof(StartupBase));
+builder.Services.ResolveDependencies();
 
 var app = builder.Build();
 

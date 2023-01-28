@@ -1,4 +1,4 @@
-﻿using Biniverso.Business.Interfaces;
+﻿using Biniverso.Business.Interfaces.Repository;
 using Biniverso.Business.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 

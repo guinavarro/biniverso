@@ -1,6 +1,6 @@
 ﻿using Biniverso.Business.Models.Entities;
 
-namespace Biniverso.Business.Interfaces
+namespace Biniverso.Business.Interfaces.Repository
 {
     public interface IBiniRepository
     {
